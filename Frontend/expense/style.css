@@ -1,0 +1,192 @@
+*{
+    padding:0;
+    margin:0;
+    border:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    padding: 1rem;
+}
+
+form{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.div2{
+    width:60%
+}
+
+ head,body{
+    background-color: #ACE1AF;
+  }
+
+label{
+  color: #004526;
+  margin: 0.5rem;
+  font-size: large;
+  font-weight: bold;
+}
+
+
+header{
+text-align:center;
+font-weight: bold;
+color: #004526;
+background-color: #8db600;
+border: 1px solid grey;
+text-decoration: underline;
+}
+
+button:hover{
+  background-color: rgb(14, 205, 135); 
+}
+li{
+  color: black;
+  font-weight: bold;
+list-style-type: none;
+margin-bottom: 1.5rem;
+}
+
+form{
+    margin-top: 2rem;
+}
+
+input,#category{
+ border-radius: 1.7rem;
+ text-align: center;
+ height: 2.2rem;
+ color: black;
+}
+.table{
+  display: block;
+  margin-left: 12rem;
+}
+tr{
+display: flex;
+}
+td{
+  border:1px solid black;
+  width: 12rem;
+  background-color: #fff;
+}
+.td{
+  background-color: rgb(16, 184, 206);
+  color: white;
+}
+
+thead{
+  font-weight:bold;
+}
+
+.li{
+  display: flex;
+}
+
+.btntd{
+  border: none;
+  width: 4rem;
+  margin-bottom: 0.5rem;
+  background-color: #ACE1AF;
+
+}
+.btn{
+  background-color: rgb(16, 184, 206);
+  margin-right: 3rem;
+}
+
+.downloadfile,.tdownload{
+  width: fit-content;
+  background-color: #fff;
+  /* margin-right: 6rem; */
+}
+.tdf{
+  width: 100vw;
+  background-color: rgb(16, 184, 206);
+  color:white;
+  text-align: center;
+}
+.premium{
+  display: flex;
+  margin-top: 2.4rem;
+  margin-left: 2rem;
+}
+
+.a{
+  width: fit-content;
+  color: blueviolet; 
+}
+#message{
+  margin-left: 14rem;
+}
+
+.tdd{
+  width: fit-content;
+}
+
+button,.button,.leaderboard{
+  width:7.9rem;
+  margin-left: 12px;
+  border-radius: 0.5rem;
+   text-align: center; 
+  background-color: rgb(6, 193, 231);
+  color: white;
+  font-weight: bold;
+  height: 2.3rem;
+  }  
+
+  .pagination{
+    display: flex;
+  justify-content: center;
+  margin-top: 0.9rem;
+  }
+
+  .exp-btn{
+    display: block;
+    margin-left: 30rem;
+    margin-top: 3rem;
+  }
+
+  .downloadbtn{
+    margin-left: 30rem;
+    margin-top: 1rem;
+  }
+
+  .btn{
+    background-color: rgb(6, 193, 231);
+  }
+  .btn:hover{
+    background-color: red
+  }
+.btn-pagination{
+  background-color: #17B169;
+  width:3rem;
+  margin-right: 2rem;
+  margin-top: 3rem;
+}
+.btn-pagination:hover{
+  background-color: #00563B;
+  cursor: pointer;
+
+}
+.btn-submit{
+  width: 5rem;
+  height: 2rem;
+}
+.inputmaximum{
+  width: 6rem;
+  height:2rem ;
+  border-radius: 0.4rem;
+}
+.last-foot{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.expense{
+  text-align: center;
+}
+tfoot{
+  color:red
+}

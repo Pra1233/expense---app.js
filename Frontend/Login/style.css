@@ -1,0 +1,64 @@
+body{
+background-color: rgb(220, 213, 213);
+}
+
+label{
+    font-size: large;
+    font-weight: bold;
+}
+
+
+.forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(94, 94, 94);
+   padding: 1rem;
+   width: 20rem;
+   height: 15rem;
+   border-radius: 2.5rem;
+}
+.all{
+margin-left: 40vw;
+margin-top: 15vh;
+}
+.input-block{
+    margin: 2rem;
+}
+.name{
+    margin-left: 2.7rem;
+}
+.email{
+    margin-left: 2.3rem; 
+}
+.password{
+    margin-left: 1.1rem; 
+}
+input{
+    width: 7rem;
+    border-radius: 0.3rem;
+}
+
+
+.btn-login{
+
+display: flex;
+    margin-right: 16rem;
+}
+.btn-signup{
+
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+   margin-left:6rem;
+   margin-top: 2rem;
+    border-radius: 0.7rem;
+    background-color: rgb(156, 156, 8);
+}
+.btnlogin{
+    margin-top: 1rem;
+   margin-left: 2.5rem;
+   background-color: rgb(211, 213, 206);
+    color: blueviolet;
+    border-radius: 0.7rem;
+}

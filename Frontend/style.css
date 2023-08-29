@@ -1,0 +1,84 @@
+*{
+    padding:0;
+    margin:0;
+    border:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: gainsboro;
+}
+.c1{
+    display: flex;
+    background-color: blue;
+    width:100vw;
+    height:8.2rem
+}
+
+.logo{
+    background-image: url('./images/expense.png');
+    background-size: cover;
+    width:4.7rem;
+    height:4.7rem;
+    border-radius: 1.9rem;
+    margin-top: 0.4rem;
+    margin-left: 6%;
+    border: 2px solid black;
+}
+.p{
+  margin-top: 0.6rem;
+  font-size: large;
+  margin-left: 36%;
+  color: rgb(21, 177, 78);
+}
+.h3{
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+h2{
+    text-align: center;
+
+}
+/* MAIN */
+.c2{
+    background-color: rgb(12, 192, 171);
+    height:12vw;
+    width:100vw;
+    padding-left: 2rem;
+    color: aliceblue;
+    font-size: large;
+    letter-spacing: 0.1rem;
+}
+
+.c2p{
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  
+}
+
+/* container3 */
+.c3{
+padding: 1rem;
+letter-spacing: 0.1rem;
+background-color: white;
+}
+.h2{
+    margin-bottom: 0.7rem;
+}
+
+.but{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+margin-top:1.7rem ;
+
+}
+button{
+    margin-bottom: 1rem;
+    width: 8rem;
+    height: 2rem;
+    background-color: white;
+    color: rgb(3, 96, 37);
+    font-size: bold;
+    font-weight:bold;
+   
+}

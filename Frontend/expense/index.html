@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense</title>
+</head>
+<body>
+  
+<header>
+ <div class="header">
+    <h2>Day to Day Expenses</h2>
+ </div>
+</header>
+
+<main>
+
+    <form  onsubmit = "Expense(event)" method="POST">
+  <label>Expense Amount</label>
+  <input type="number" class="amount" placeholder="amount" required>
+
+  <label>Description</label>
+  <input type="text" class="des" placeholder="Description" required>
+
+  <label>Choose Category</label>
+  <select id="category" >
+    <option value="">Please Select Category</option>
+    <option value="Fuel">Fuel</option>
+    <option value="Medicine">Medicine</option>
+    <option value="Grocery">Grocery</option>
+  </select>
+
+  <input type="submit"  value="Submit" class="button">
+    </form>
+   
+  <div class="premium">
+    <button id="razor">Buy Premium</button>
+    <h3 id="message"></h3> 
+  </div>  
+
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  
+    <div class="div2">
+      <div class="exp-btn">
+        <h2 class="expense">  Expense  </h2>
+      </div>     
+        <table class="table">
+         <thead>
+          <td class="td">Date</td>
+          <td class="td">Expense</td>
+          <td class="td">Description</td>
+          <td class="td">Category</td>
+        </thead> 
+        <tfoot >
+          <tr><td colspan="2">Total Expense:</td> <td class="totalExpense"></td>  </tr>
+        </tfoot>
+        <tbody class="tbody"></tbody>  
+        </table>
+        
+        <button  class="downloadbtn button " onclick="downloadExpense()" >Download File </button>         
+     
+        <li id="leaderboardshow">   </li>  
+  
+    </div>   
+
+    
+
+</main>
+
+<footer>
+  <h3 class="expense  downloadheading">  </h3>
+  <table class="downloadfile">
+  </table>
+
+  
+  
+<div class="pagination"></div>
+
+<div class="last-foot">
+  <input type="text" class="inputmaximum" placeholder="Enter Maximum Item" >
+  <button onclick="maximumItemfun()" class="btn-submit">Submit</button>
+</div>
+
+
+
+
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.js"></script>  
+  
+<script src="./expense.js">
+</script>
+
+</body>
+</html>
