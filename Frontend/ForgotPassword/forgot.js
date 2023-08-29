@@ -8,7 +8,7 @@ function onForgot(e){
     
     const PostEmail=async(obj)=>{
     try{
-        const response= await axios.post('http://localhost:3000/password/forgotpassword',obj);
+        const response= await axios.post('http://52.195.174.194:3000/password/forgotpassword',obj);
         if(response.status===201){
             document.body.innerHTML+=`<h3 style="color:red;">Mail Successfully Sent</h3>`
         }

@@ -4,13 +4,13 @@ const cors=require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
 const userController=require('./controllers/Usercontroller');
-const helmet=require('helmet');
-const morgan=require('morgan');
+// const helmet=require('helmet');
+// const morgan=require('morgan');
 const dotenv = require('dotenv');
 dotenv.config();
-const accessLogStream=fs.createWriteStream(path.join(__dirname,'access.log'),
-{flags:'a'} 
-);
+// const accessLogStream=fs.createWriteStream(path.join(__dirname,'access.log'),
+// {flags:'a'} 
+// );
 
 const User=require('./models/Signup');
 const Expense=require('./models/Expense');
@@ -27,8 +27,8 @@ const premiumRoutes=require('./routes/premiumRoutes');
 const forgotRoutes=require('./routes/forgotRoutes');
 
 const app = express();
-app.use(helmet());
-app.use(morgan('combined',{stream:accessLogStream}));
+// app.use(helmet());
+// app.use(morgan('combined',{stream:accessLogStream}));
 app.use (cors ());
 
 app.use(bodyParser.json({ extended: false }));
@@ -42,6 +42,11 @@ app.use(expenseRoutes);
 app.use('/purchase',purchaseRoutes);
 app.use(premiumRoutes);
 app.use('/password',forgotRoutes);
+app.use((req,res)=>{ //if hit anything else come here
+    console.log('url',req.url);   
+   res.sendFile(path.join(__dirname,`Frontend/${req.url}`))
+   })
+   
 
 User.hasMany(Expense); //user primary key store in expense as foreign key
 Expense.belongsTo(User);

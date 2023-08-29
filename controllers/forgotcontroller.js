@@ -66,7 +66,7 @@ await transEmailAPi.sendTransacEmail({
     to:receivers,
     subject:'Verification',
     textContent:'Click on reset',
-    htmlContent:`<a href="http://localhost:3000/password/resetpassword/${id}">http://localhost:3000/password/resetpassword/${id}</a>`
+    htmlContent:`<a href="http://52.195.174.194:3000/password/resetpassword/${id}">http://52.195.174.194:3000/password/resetpassword/${id}</a>`
 })
 
       
@@ -109,7 +109,7 @@ const resetpassword = (req, res) => {
                                                     npass:pass
                                                  }
                                                  console.log(obj);
-                            const res=await axios.post("http://localhost:3000/password/updatepassword/${id}",obj)             
+                            const res=await axios.post("http://52.195.174.194:3000/password/updatepassword/${id}",obj)             
                                                alert(res.data.msg);
                                              }
                                          </script>   

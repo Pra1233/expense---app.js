@@ -26,7 +26,8 @@ PostExpense(obj);
 const PostExpense=async(obj)=>{
     const token=localStorage.getItem('token');
     try{
-    const res=await axios.post("http://localhost:3000/user/postexpense",obj,{
+      //  http://52.195.174.194:3000/user/postexpense    
+    const res=await axios.post("http://52.195.174.194:3000/user/postexpense",obj,{
         headers:{"Authorization":token}//object 
     });
     console.log("TOTAL_EXPENSE_SUM",res.data.user);
@@ -80,7 +81,7 @@ window.addEventListener('DOMContentLoaded',async()=>{
         let inputvalue=localStorage.getItem('inputvalue');
 
           let page=1;
-        const res=await axios.get(`http://localhost:3000/expense/getexpense?page=${page}&limit=${inputvalue}`,{ headers:{"Authorization":token}});
+        const res=await axios.get(`http://52.195.174.194:3000/expense/getexpense?page=${page}&limit=${inputvalue}`,{ headers:{"Authorization":token}});
         const user=res.data.user;
         res.data.products.forEach((product)=>{
             // screen(product,user); 
@@ -135,7 +136,7 @@ async function getProducts(page){
     const div2=document.querySelector('.tbody');
     div2.innerHTML="";
     try{
- const res=await axios.get(`http://localhost:3000/expense/getexpense?page=${page}&limit=${inputvalue}`,{ headers:{"Authorization":token}});
+ const res=await axios.get(`http://52.195.174.194:3000/expense/getexpense?page=${page}&limit=${inputvalue}`,{ headers:{"Authorization":token}});
 
      
  res.data.products.forEach((product)=>{
@@ -171,7 +172,7 @@ div2.innerHTML+=li;
 const DELETE=async(id)=>{
     const token=localStorage.getItem('token');
     try{  
-     const res= await axios.delete(`http://localhost:3000/expense/deleteexpense/${id}`,{  headers:{"Authorization":token} });
+     const res= await axios.delete(`http://52.195.174.194:3000/expense/deleteexpense/${id}`,{  headers:{"Authorization":token} });
      delScreen(id);
      totalExpenseSum(res.data.user);  
 
@@ -195,14 +196,14 @@ function delScreen(id){
 
 document.getElementById('razor').onclick =async function(e){
     const token=localStorage.getItem('token');
-    const response=await axios.get('http://localhost:3000/purchase/premiummembership',{headers:{"Authorization":token}})
+    const response=await axios.get('http://52.195.174.194:3000/purchase/premiummembership',{headers:{"Authorization":token}})
      console.log(response);
      var options=
      {
         "key":response.data.key_id,
         "order_id":response.data.order.id,
         "handler":async function (response){
-     const res= await axios.post('http://localhost:3000/purchase/updatetransactionstatus',{
+     const res= await axios.post('http://52.195.174.194:3000/purchase/updatetransactionstatus',{
                 order_id:options.order_id,
                 payment_id:response.razorpay_payment_id,
             },{headers:{"Authorization":token}})
@@ -234,7 +235,7 @@ input.value="Show LeaderBoard";
 input.className="leaderboard";
 input.onclick=async()=>{
 const token=localStorage.getItem('token');
-const leaderboardArray=await axios.get('http://localhost:3000/premium/showleaderboard',{headers:{"Authorization":token}})
+const leaderboardArray=await axios.get('http://52.195.174.194:3000/premium/showleaderboard',{headers:{"Authorization":token}})
 console.log(leaderboardArray);
 
 var leaderboard=document.getElementById('leaderboardshow')
@@ -249,7 +250,7 @@ document.getElementById('message').appendChild(input);
 }
 // DOWNLOAD EXPENSE
 const downloadExpense=async()=>{
- const response=await axios.get('http://localhost:3000/user/download',{headers:{"Authorization":token}})
+ const response=await axios.get('http://52.195.174.194:3000/user/download',{headers:{"Authorization":token}})
  try{
     
     if(response.status === 200){

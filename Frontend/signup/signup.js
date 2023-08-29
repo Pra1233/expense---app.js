@@ -12,7 +12,7 @@ function onSignup(e){
 
     const onPost=async(obj)=>{
     try{
-    const res=await axios.post('http://localhost:3000/user/adduser',obj);
+    const res=await axios.post('http://52.195.174.194:3000/user/adduser',obj);
     alert(res.data.message);
     window.location.href="../expense/index.html"
     // window.location.href="../Login/login.html"

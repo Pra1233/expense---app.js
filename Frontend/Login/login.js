@@ -12,7 +12,7 @@
     
     const onPostLogin=async(obj)=>{
      try{
-      const response= await axios.post('http://localhost:3000/user/login',obj);
+      const response= await axios.post('http://52.195.174.194:3000/user/login',obj);
        alert(response.data.message);
        localStorage.setItem('token',response.data.token);
        window.location.href="../expense/index.html"
